@@ -29,5 +29,5 @@ def login(request):
 def secret_Page(request):
     return render(request,'secret_page.html')
 
-class SecretPage(LoginRequired,MixinTemplateView):
+class SecretPage(LoginRequiredMixin,TemplateView):
     template_name = 'secret_page.html'
